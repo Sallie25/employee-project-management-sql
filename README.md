@@ -58,5 +58,5 @@ For each employee who has worked on more than one project:
 - Relational database design principles
 - Aggregate functions, subqueries, joins, and conditional logic
 
-## 📂 Structure
+
 
