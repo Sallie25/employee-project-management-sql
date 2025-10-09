@@ -2,7 +2,7 @@
 
 This project demonstrates the design, creation, and querying of a relational database system to manage employees, departments, and project assignments. It includes schema definitions, bulk data insertion, and advanced SQL queries for reporting and data manipulation.
 
-## 📐 Database Schema
+##  Database Schema
 
 The system consists of four core tables:
 
@@ -26,7 +26,7 @@ The database is populated with:
 - 4 projects
 - 15 employee-project assignment records
 
-## 📊 Analytical Queries
+##  Analytical Queries
 
 ### 1. Department Salary Summary
 
@@ -52,7 +52,7 @@ For each employee who has worked on more than one project:
 - Department name
 - Total hours worked (using aggregate function)
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - SQL (PostgreSQL / MySQL compatible)
 - Relational database design principles
