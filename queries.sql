@@ -34,12 +34,17 @@ SELECT * FROM employees;
 
 -- 4B - Move employees hired before 2020 and working in “Support” to a new department called “Legacy Support”.
 
+-- Insert a new department called Legacy support to the departments Table
+INSERT INTO departments (department_name)
+value ('Legacy Support');
+
 -- Find the department_id for 'Support' AND 'Legacy Support'
 SELECT department_id 
 FROM departments
 WHERE department_name = 'Legacy Support' OR department_name = 'Support' ;
 
 -- Moving employees hired before 2020 and working in “Support” to a new department called “Legacy Support”.
+
 UPDATE employees
 SET department_id = 6
 WHERE department_id = 5
@@ -49,7 +54,7 @@ AND hire_date < '2020-01-01';
 
 -- Run this first to be sure of the department that fit the category
 
--- cfind rows that satisfy the conditions
+-- find rows that satisfy the conditions
 SELECT department_id
 FROM
 (SELECT department_id, COUNT(*) No_of_employees
@@ -62,7 +67,7 @@ HAVING COUNT(*) = 1
 
 DELETE 
 FROM employees
-WHERE department_id IN (SELECT department_id
+WHERE department_id IN (SELECT t1.department_id
 FROM
 (SELECT department_id, COUNT(*) No_of_employees
 FROM employees
@@ -102,4 +107,6 @@ WHERE e.employee_id IN (
 		GROUP BY employee_id
 		HAVING COUNT(project_id) > 1
 )
+
+
 
